@@ -1,15 +1,21 @@
+
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Homescreen from './screens/home';
+//import { createStackNavigator } from "@react-navigation/stack";
 
 export default function App() {
+  /*
   return (
-    <View style={styles.container}>
-      <Text>Started a new React Native project!</Text>
-      <StatusBar style="auto" />
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>HomeScreen</Text>
     </View>
-  );
+  ); 
+  */
+  return(Homescreen());  
 }
+
 
 const styles = StyleSheet.create({
   container: {
