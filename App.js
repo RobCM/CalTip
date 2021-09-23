@@ -1,7 +1,7 @@
 
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Button, Alert} from 'react-native';
+import { StyleSheet, Text, View, Button, Alert, TextInput} from 'react-native';
 import Homescreen from './screens/home';
 //import { createStackNavigator } from "@react-navigation/stack";
 
