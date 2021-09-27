@@ -8,7 +8,6 @@ import React from 'react';
 
 export default function HomeScreen(){
 
-  const [text, onChangeText] = React.useState("Input Total Here");
   const [number, onChangeNumber] = React.useState(null);
 
   return (
@@ -17,9 +16,10 @@ export default function HomeScreen(){
       <Text>Hello from Da Home Screen Bro!!!</Text>
 
       <TextInput
-       style={home_styles.input}
-        onChangeText={onChangeText}
-        value={text}
+        style={home_styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        keyboardType="numeric"
       />
 
       <Button
