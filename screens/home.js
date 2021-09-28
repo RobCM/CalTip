@@ -8,7 +8,9 @@ import React from 'react';
 
 export default function HomeScreen(){
 
-  const [number, onChangeNumber] = React.useState(null);
+  const [numberone, onChangeNumberOne] = React.useState('');
+  const [numbertwo, onChangeNumberTwo] = React.useState('');
+
 
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -17,15 +19,22 @@ export default function HomeScreen(){
 
       <TextInput
         style={home_styles.input}
-        onChangeText={onChangeNumber}
-        value={number}
+        onChangeText={onChangeNumberOne}
         keyboardType="numeric"
+        value={numberone}
+      />
+
+      <TextInput
+        style={home_styles.input}
+        onChangeText={onChangeNumberTwo}
+        keyboardType="numeric"
+        value={numbertwo}
       />
 
       <Button
         title="CALCULATE"
-        color="#f194ff"
-        onPress={() => Alert.alert('Button pressed to calculate!')}
+        color="black"
+        onPress={() => Alert.alert('Button pressed to calculate! '+ numberone + ' ' + numbertwo)}
       />
 
     </View>
