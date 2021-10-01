@@ -33,8 +33,6 @@ export default function HomeScreen(){
 
   const [numberone, onChangeNumberOne] = React.useState(null);
   const [numbertwo, onChangeNumberTwo] = React.useState(null);
-
-  var testObj = numberone + numbertwo;
   
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -60,7 +58,7 @@ export default function HomeScreen(){
       <Button
         title="CALCULATE"
         color="black"
-        onPress={() => Alert.alert('Button pressed to calculate! '+ testObj)}
+        onPress={() => Alert.alert('Button pressed to calculate! '+ format_money(numberone) + ' ' + format_money(numbertwo))}
       />
 
     </View>
@@ -75,3 +73,9 @@ const home_styles = StyleSheet.create({
     padding: 10,
   },
 });
+// Functions
+function format_money(moneyinput){		
+  moneyinput = parseFloat(moneyinput);
+  moneyinput = moneyinput.toFixed(2);
+  return moneyinput;
+}
