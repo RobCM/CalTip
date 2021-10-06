@@ -5,7 +5,8 @@
 */
 import {StyleSheet, Text, View, Button, Alert,  TextInput} from 'react-native';
 import React from 'react';
-
+import {useState} from 'react';
+import RadioGroup from 'react-native-radio-buttons-group';
 /* formula for tip:
     Find the total of your pretax bill.
     Move the decimal point to the left one place.
@@ -27,13 +28,45 @@ Then we double it.
 = 14.00
 
 Therefore, your tip will be worth $ 14.00.
+
+Tips % :
+5%
+10%
+15%
+20%
+25%
+30%
 */
+
+const radioButtonsData = [
+  {
+    id: '1',
+    label: '5%',
+    value: 'option1',
+    color: 'gray',
+    selected: true,
+  },
+  {
+    id: '2',
+    label: '10%',
+    value: 'option2',
+    color: 'gray',
+    selected: false,
+  },
+];
+
 
 export default function HomeScreen(){
 
   const [numberone, onChangeNumberOne] = React.useState(null);
   const [numbertwo, onChangeNumberTwo] = React.useState(null);
-  
+
+  const [radioButtons, setRadioButtons] = useState(radioButtonsData);
+  const onPressRadioButton = radioButtonsArray => {
+    //console.log(radioButtonsArray);
+    setRadioButtons(radioButtonsArray);
+  };
+
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
 
@@ -55,6 +88,12 @@ export default function HomeScreen(){
         value={numbertwo}
       />
 
+      <RadioGroup
+        radioButtons={radioButtons}
+        onPress={onPressRadioButton}
+        layout="row"
+      />
+
       <Button
         title="CALCULATE"
         color="black"
@@ -73,6 +112,7 @@ const home_styles = StyleSheet.create({
     padding: 10,
   },
 });
+
 // Functions
 function format_money(moneyinput){		
   moneyinput = parseFloat(moneyinput);
