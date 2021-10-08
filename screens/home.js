@@ -54,7 +54,7 @@ const radioButtonsData = [
     selected: false,
   },
   {
-    id: '2',
+    id: '3',
     label: '15%',
     value: 'option3',
     color: 'gray',
