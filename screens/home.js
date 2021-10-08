@@ -53,13 +53,19 @@ const radioButtonsData = [
     color: 'gray',
     selected: false,
   },
+  {
+    id: '2',
+    label: '15%',
+    value: 'option3',
+    color: 'gray',
+    selected: false,
+  },
 ];
 
 
 export default function HomeScreen(){
 
-  const [numberone, onChangeNumberOne] = React.useState(null);
-  const [numbertwo, onChangeNumberTwo] = React.useState(null);
+  const [itemPrice, onChangeitemPrice] = React.useState(null);
 
   const [radioButtons, setRadioButtons] = useState(radioButtonsData);
   const onPressRadioButton = radioButtonsArray => {
@@ -74,18 +80,10 @@ export default function HomeScreen(){
 
       <TextInput
         style={home_styles.input}
-        onChangeText={onChangeNumberOne}
+        onChangeText={onChangeitemPrice}
         keyboardType="numeric"
         maxLength={9}
-        value={numberone}
-      />
-
-      <TextInput
-        style={home_styles.input}
-        onChangeText={onChangeNumberTwo}
-        keyboardType="numeric"
-        maxLength={9}
-        value={numbertwo}
+        value={itemPrice}
       />
 
       <RadioGroup
@@ -97,7 +95,7 @@ export default function HomeScreen(){
       <Button
         title="CALCULATE"
         color="black"
-        onPress={() => Alert.alert('Button pressed to calculate! '+ format_money(numberone) + ' ' + format_money(numbertwo))}
+        onPress={() => Alert.alert('Button pressed to calculate! '+ format_money(itemPrice))}
       />
 
     </View>
