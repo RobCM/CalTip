@@ -112,8 +112,13 @@ const home_styles = StyleSheet.create({
 });
 
 // Functions
-function format_money(moneyinput){		
-  moneyinput = parseFloat(moneyinput);
-  moneyinput = moneyinput.toFixed(2);
-  return moneyinput;
+function format_money(moneyinput){
+  if (moneyinput == null) {
+    return '$0.00';
+  }
+  else{
+    moneyinput = parseFloat(moneyinput);
+    moneyinput = moneyinput.toFixed(2);
+    return moneyinput;
+  }
 }
