@@ -42,21 +42,28 @@ const radioButtonsData = [
   {
     id: '1',
     label: '5%',
-    value: 'option1',
+    value: '5',
     color: 'gray',
-    selected: true,
+    selected: false,
   },
   {
     id: '2',
     label: '10%',
-    value: 'option2',
+    value: '10',
     color: 'gray',
     selected: false,
   },
   {
     id: '3',
     label: '15%',
-    value: 'option3',
+    value: '15',
+    color: 'gray',
+    selected: false,
+  },
+  {
+    id: '4',
+    label: '20%',
+    value: '20',
     color: 'gray',
     selected: false,
   },
@@ -69,14 +76,16 @@ export default function HomeScreen(){
 
   const [radioButtons, setRadioButtons] = useState(radioButtonsData);
   const onPressRadioButton = radioButtonsArray => {
-    //console.log(radioButtonsArray);
     setRadioButtons(radioButtonsArray);
   };
+
+  // To get radio button value!
+  let selectedButton = radioButtonsData.find(e => e.selected == true);
 
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
 
-      <Text>Hello from Da Home Screen Bro!!!</Text>
+      <Text>Tip Calculater</Text>
 
       <TextInput
         style={home_styles.input}
@@ -85,7 +94,7 @@ export default function HomeScreen(){
         maxLength={9}
         value={itemPrice}
       />
-
+ 
       <RadioGroup
         radioButtons={radioButtons}
         onPress={onPressRadioButton}
@@ -95,7 +104,7 @@ export default function HomeScreen(){
       <Button
         title="CALCULATE"
         color="black"
-        onPress={() => Alert.alert('Button pressed to calculate! '+ format_money(itemPrice))}
+        onPress={() => Alert.alert("the tip choose is: " + selectedButton['value'] + "%")}
       />
 
     </View>
@@ -114,7 +123,7 @@ const home_styles = StyleSheet.create({
 // Functions
 function format_money(moneyinput){
   if (moneyinput == null) {
-    return '$0.00';
+    return '0.00';
   }
   else{
     moneyinput = parseFloat(moneyinput);
@@ -122,3 +131,10 @@ function format_money(moneyinput){
     return moneyinput;
   }
 }
+
+/*
+function caltip(tipoutput){
+  tipoutput = 
+
+}
+*/
