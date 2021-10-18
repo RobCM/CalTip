@@ -58,7 +58,7 @@ const radioButtonsData = [
     label: '15%',
     value: '15',
     color: 'gray',
-    selected: false,
+    selected: true,
   },
   {
     id: '4',
@@ -104,7 +104,7 @@ export default function HomeScreen(){
       <Button
         title="CALCULATE"
         color="black"
-        onPress={() => Alert.alert("the tip choose is: " + selectedButton['value'] + "%")}
+        onPress={() => Alert.alert("the tip choose is: " + caltip(selectedButton['value'], format_money(itemPrice)))}
       />
 
     </View>
@@ -132,9 +132,8 @@ function format_money(moneyinput){
   }
 }
 
-/*
-function caltip(tipoutput){
-  tipoutput = 
+function caltip(percenttip, totalprice){
 
+
+  return percenttip + " and " + totalprice
 }
-*/
