@@ -133,7 +133,6 @@ function format_money(moneyinput){
 }
 
 function caltip(percenttip, totalprice){
-
-
-  return percenttip + " and " + totalprice
+  let totaltip = (totalprice/100) * percenttip;
+  return totaltip;
 }
