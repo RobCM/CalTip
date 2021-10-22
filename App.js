@@ -16,7 +16,6 @@ export default function App() {
   return(Homescreen());  
 }
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
