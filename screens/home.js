@@ -104,7 +104,7 @@ export default function HomeScreen(){
       <Button
         title="CALCULATE"
         color="black"
-        onPress={() => Alert.alert("The tip is: " + caltip(selectedButton['value'], format_money(itemPrice)) + " For the amount off $" + format_money(itemPrice))}
+        onPress={() => Alert.alert("The tip is: $" +  format_money(caltip(selectedButton['value'], format_money(itemPrice))) + " For the amount off $" + format_money(itemPrice))}
       />
 
     </View>
