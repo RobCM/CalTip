@@ -7,36 +7,6 @@ import {StyleSheet, Text, View, Button, Alert,  TextInput} from 'react-native';
 import React from 'react';
 import {useState} from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
-/* formula for tip:
-    Find the total of your pretax bill.
-    Move the decimal point to the left one place.
-    Round up.
-    Double the number 
-
-Example:
-
-Suppose your pretax bill was $ 70.0. Calculate your tip.
-
-Since we know your total pretax bill so we’ll begin by moving the decimal to the left to get $ 7.00.
-
-Since we get a whole there is no need to round up.
-
-Then we double it.
-
-= 7.00 x 2
-
-= 14.00
-
-Therefore, your tip will be worth $ 14.00.
-
-Tips % :
-5%
-10%
-15%
-20%
-25%
-30%
-*/
 
 const radioButtonsData = [
   {
@@ -105,6 +75,12 @@ export default function HomeScreen(){
         title="CALCULATE"
         color="black"
         onPress={() => Alert.alert("The tip is: $" +  format_money(caltip(selectedButton['value'], format_money(itemPrice))) + " For the amount off $" + format_money(itemPrice))}
+      />
+
+      <Button
+        title="About this app!"
+        color="black"
+        onPress={() => Alert.alert("This app was developed by Robert Coleman as an \n exercise to learn the react native environment.")}
       />
 
     </View>
