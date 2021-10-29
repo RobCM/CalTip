@@ -3,7 +3,7 @@
     @RobertC 9/7/2021
 
 */
-import {StyleSheet, Text, View, Button, Alert,  TextInput} from 'react-native';
+import {StyleSheet, Text, View, Button, Alert,  TextInput, Pressable} from 'react-native';
 import React from 'react';
 import {useState} from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
@@ -70,17 +70,18 @@ export default function HomeScreen(){
         onPress={onPressRadioButton}
         layout="row"
       />
-
-      <Button
-        title="CALCULATE"
-        color="black"
+    
+      <Pressable 
+        style={home_styles.calcuBTN}
         onPress={() => Alert.alert("The tip is: $" +  format_money(caltip(selectedButton['value'], format_money(itemPrice))) + " For the amount off $" + format_money(itemPrice))}
-      />
+      >
+        <Text style={home_styles.text}> CALCULATE </Text>
+      </Pressable>
+      
 
       <Button
         title="About this app!"
-        color="black"
-        onPress={() => Alert.alert("This app was developed by Robert Coleman as an \n exercise to learn the react native environment.")}
+        onPress={() => Alert.alert("This app was develop by Robert Coleman", "As an exercise to learn the react native environment.")}
       />
 
     </View>
@@ -93,6 +94,22 @@ const home_styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
     padding: 10,
+  },
+  calcuBTN: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'gray',
+  },
+  text: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    color: 'white',
   },
 });
 
