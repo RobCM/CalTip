@@ -8,6 +8,7 @@ import React from 'react';
 import {useState} from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
 
+
 const radioButtonsData = [
   {
     id: '1',
@@ -53,7 +54,7 @@ export default function HomeScreen(){
   let selectedButton = radioButtonsData.find(e => e.selected == true);
 
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <View style={home_styles.viewBox}>
 
       <Text>Tip Calculater</Text>
 
@@ -79,16 +80,24 @@ export default function HomeScreen(){
       </Pressable>
       
 
-      <Button
-        title="About this app!"
+      <Pressable 
+        style={home_styles.aboutBTN}
         onPress={() => Alert.alert("This app was develop by Robert Coleman", "As an exercise to learn the react native environment.")}
-      />
+        >
+        <Text style={home_styles.text}> ABOUT THIS APP! </Text>
+      </Pressable>
 
     </View>
   );
 };
 
 const home_styles = StyleSheet.create({
+  viewBox: {
+    flex: 1, 
+    alignItems: 'center', 
+    justifyContent: 'center',
+    backgroundColor: 'gray',
+  },
   input: {
     height: 40,
     margin: 12,
@@ -103,6 +112,15 @@ const home_styles = StyleSheet.create({
     borderRadius: 4,
     elevation: 3,
     backgroundColor: 'gray',
+  },
+  aboutBTN: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'lightgray',
   },
   text: {
     fontSize: 16,
