@@ -7,7 +7,7 @@ import {StyleSheet, Text, View, Button, Alert,  TextInput, Pressable} from 'reac
 import React from 'react';
 import {useState} from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
-
+import {LinearGradient} from 'expo-linear-gradient';
 
 const radioButtonsData = [
   {
@@ -54,40 +54,45 @@ export default function HomeScreen(){
   let selectedButton = radioButtonsData.find(e => e.selected == true);
 
   return (
+    <><LinearGradient
+      colors={["#0e86f1", "#2859a3", "#0c2a62"]}
+      style={home_styles.viewBox}>
+    
+    
     <View style={home_styles.viewBox}>
 
-      <Text>Tip Calculater</Text>
+        <Text>Tip Calculater</Text>
 
-      <TextInput
-        style={home_styles.input}
-        onChangeText={onChangeitemPrice}
-        keyboardType="numeric"
-        maxLength={9}
-        value={itemPrice}
-      />
- 
-      <RadioGroup
-        radioButtons={radioButtons}
-        onPress={onPressRadioButton}
-        layout="row"
-      />
-    
-      <Pressable 
-        style={home_styles.calcuBTN}
-        onPress={() => Alert.alert("The tip is: $" +  format_money(caltip(selectedButton['value'], format_money(itemPrice))) + " For the amount off $" + format_money(itemPrice))}
-      >
-        <Text style={home_styles.text}> CALCULATE </Text>
-      </Pressable>
-      
+        <TextInput
+          style={home_styles.input}
+          onChangeText={onChangeitemPrice}
+          keyboardType="numeric"
+          maxLength={9}
+          value={itemPrice} />
 
-      <Pressable 
-        style={home_styles.aboutBTN}
-        onPress={() => Alert.alert("This app was develop by Robert Coleman", "As an exercise to learn the react native environment.")}
+        <RadioGroup
+          radioButtons={radioButtons}
+          onPress={onPressRadioButton}
+          layout="row" />
+
+        <Pressable
+          style={home_styles.calcuBTN}
+          onPress={() => Alert.alert("The tip is: $" + format_money(caltip(selectedButton['value'], format_money(itemPrice))) + " For the amount off $" + format_money(itemPrice))}
         >
-        <Text style={home_styles.text}> ABOUT THIS APP! </Text>
-      </Pressable>
+          <Text style={home_styles.text}> CALCULATE </Text>
+        </Pressable>
 
-    </View>
+
+        <Pressable
+          style={home_styles.aboutBTN}
+          onPress={() => Alert.alert("This app was develop by Robert Coleman", "As an exercise to learn the react native environment.")}
+        >
+          <Text style={home_styles.text}> ABOUT THIS APP! </Text>
+        </Pressable>
+
+      </View>
+      </LinearGradient>
+      </>
   );
 };
 
@@ -96,7 +101,6 @@ const home_styles = StyleSheet.create({
     flex: 1, 
     alignItems: 'center', 
     justifyContent: 'center',
-    backgroundColor: 'gray',
   },
   input: {
     height: 40,
@@ -114,13 +118,15 @@ const home_styles = StyleSheet.create({
     backgroundColor: 'gray',
   },
   aboutBTN: {
+    width: '100%',  
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 12,
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: 'lightgray',
+    position: 'absolute',
+    bottom: 0,
   },
   text: {
     fontSize: 16,
