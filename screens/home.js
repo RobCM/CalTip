@@ -58,10 +58,11 @@ export default function HomeScreen(){
       colors={["#0e86f1", "#2859a3", "#0c2a62"]}
       style={home_styles.viewBox}>
     
+    <View style={home_styles.titleBox}>
+        <Text style={home_styles.title_text}>Tip Calculater</Text>
+    </View>
     
     <View style={home_styles.viewBox}>
-
-        <Text>Tip Calculater</Text>
 
         <TextInput
           style={home_styles.input}
@@ -133,6 +134,18 @@ const home_styles = StyleSheet.create({
     lineHeight: 21,
     fontWeight: 'bold',
     letterSpacing: 0.25,
+    color: 'white',
+  },
+  titleBox: {
+    width: '100%',  
+    position: 'absolute',
+    top: 150,
+    backgroundColor: 'gray',
+  },
+  title_text: {
+    fontSize: 26,
+    fontWeight: 'bold',
+    letterSpacing: 0.35,
     color: 'white',
   },
 });
