@@ -100,13 +100,13 @@ export default function HomeScreen(){
 const home_styles = StyleSheet.create({
   viewBox: {
     flex: 1, 
-    alignItems: 'center', 
     justifyContent: 'center',
   },
   input: {
     height: 40,
     margin: 12,
     borderWidth: 1,
+    borderColor: 'gray',
     padding: 10,
   },
   calcuBTN: {
