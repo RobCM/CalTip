@@ -103,11 +103,13 @@ const home_styles = StyleSheet.create({
     justifyContent: 'center',
   },
   input: {
-    height: 40,
-    margin: 12,
+    height: 70,
+    margin: 25,
     borderWidth: 1,
     borderColor: 'gray',
+    color: 'white',
     padding: 10,
+    fontSize: 50,
   },
   calcuBTN: {
     alignItems: 'center',
