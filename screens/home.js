@@ -40,11 +40,9 @@ const radioButtonsData = [
   },
 ];
 
-
 export default function HomeScreen(){
 
   const [itemPrice, onChangeitemPrice] = React.useState(null);
-
   const [radioButtons, setRadioButtons] = useState(radioButtonsData);
   const onPressRadioButton = radioButtonsArray => {
     setRadioButtons(radioButtonsArray);
