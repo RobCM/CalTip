@@ -12,28 +12,36 @@ import {LinearGradient} from 'expo-linear-gradient';
 const radioButtonsData = [
   {
     id: '1',
-    label: '5%',
+    label: (
+      <Text style={{color: '#FFFFFF'}}>{'5%'}</Text>
+    ),
     value: '5',
     color: 'gray',
     selected: false,
   },
   {
     id: '2',
-    label: '10%',
+    label: (
+      <Text style={{color: '#FFFFFF'}}>{'10%'}</Text>
+    ),
     value: '10',
     color: 'gray',
     selected: false,
   },
   {
     id: '3',
-    label: '15%',
+    label: (
+      <Text style={{color: '#FFFFFF'}}>{'15%'}</Text>
+    ),
     value: '15',
     color: 'gray',
     selected: true,
   },
   {
     id: '4',
-    label: '20%',
+    label: (
+      <Text style={{color: '#FFFFFF'}}>{'20%'}</Text>
+    ),
     value: '20',
     color: 'gray',
     selected: false,
