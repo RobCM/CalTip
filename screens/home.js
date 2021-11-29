@@ -114,7 +114,7 @@ const home_styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'gray',
     color: 'white',
-    padding: 10,
+    padding: 5,
     fontSize: 50,
   },
   calcuBTN: {
