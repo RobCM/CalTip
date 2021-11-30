@@ -3,7 +3,7 @@
     @RobertC 9/7/2021
 
 */
-import {StyleSheet, Text, View, Button, Alert,  TextInput, Pressable} from 'react-native';
+import {StyleSheet, Text, View, Button, Alert,  TextInput, Pressable,  ImageBackground} from 'react-native';
 import React from 'react';
 import {useState} from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
@@ -49,7 +49,7 @@ const radioButtonsData = [
 ];
 
 export default function HomeScreen(){
-
+  const bgimage = { uri:"https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/austin-skyline-in-spring-black-and-white-2-rob-greebon.jpg"};
   const [itemPrice, onChangeitemPrice] = React.useState(null);
   const [radioButtons, setRadioButtons] = useState(radioButtonsData);
   const onPressRadioButton = radioButtonsArray => {
@@ -70,6 +70,8 @@ export default function HomeScreen(){
     
     <View style={home_styles.viewBox}>
 
+    <ImageBackground source={bgimage} resizeMode="cover" style={home_styles.image}>
+      
         <TextInput
           style={home_styles.input}
           onChangeText={onChangeitemPrice}
@@ -97,6 +99,7 @@ export default function HomeScreen(){
           <Text style={home_styles.text}> ABOUT THIS APP! </Text>
         </Pressable>
 
+        </ImageBackground>
       </View>
       </LinearGradient>
       </>
@@ -158,6 +161,10 @@ const home_styles = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 0.35,
     color: 'white',
+  },
+  image: {
+    flex: 1,
+    justifyContent: "center"
   },
 });
 
