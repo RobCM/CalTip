@@ -8,6 +8,7 @@ import React from 'react';
 import {useState} from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
 import {LinearGradient} from 'expo-linear-gradient';
+import bgimage from './images/austintx.png';
 
 const radioButtonsData = [
   {
@@ -49,7 +50,7 @@ const radioButtonsData = [
 ];
 
 export default function HomeScreen(){
-  const bgimage = { uri:"https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/austin-skyline-in-spring-black-and-white-2-rob-greebon.jpg"};
+  //const bgimage = { uri:"https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/austin-skyline-in-spring-black-and-white-2-rob-greebon.jpg"};
   const [itemPrice, onChangeitemPrice] = React.useState(null);
   const [radioButtons, setRadioButtons] = useState(radioButtonsData);
   const onPressRadioButton = radioButtonsArray => {
@@ -151,16 +152,16 @@ const home_styles = StyleSheet.create({
     width: '100%', 
     alignItems: 'center', 
     top: 150,
-    borderWidth: 1,
-    borderColor: 'white',
     elevation: 9,
     shadowColor: 'black',
+    position: 'absolute',
+    top: 30,
   },
   title_text: {
     fontSize: 36,
     fontWeight: 'bold',
     letterSpacing: 0.35,
-    color: 'white',
+    color: '#ff44cc',
   },
   image: {
     flex: 1,
