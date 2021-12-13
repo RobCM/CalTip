@@ -117,6 +117,7 @@ const home_styles = StyleSheet.create({
     margin: 25,
     borderWidth: 1,
     borderColor: 'gray',
+    backgroundColor: 'black',
     color: 'white',
     padding: 5,
     fontSize: 50,
