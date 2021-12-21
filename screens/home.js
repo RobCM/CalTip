@@ -81,6 +81,7 @@ export default function HomeScreen(){
           value={itemPrice} />
 
         <RadioGroup
+          style={home_styles.radioInput}
           radioButtons={radioButtons}
           onPress={onPressRadioButton}
           layout="row" />
@@ -122,17 +123,19 @@ const home_styles = StyleSheet.create({
     color: 'white',
     padding: 5,
     fontSize: 50,
-    position: 'absolute',
-    top: 120,
+    top: 50,
   },
+  radioInput: {
+    top: 70,
+  }, 
   calcuBTN: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    margin: 80,
     paddingVertical: 12,
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
     backgroundColor: 'gray',
+    top: 100,
   },
   aboutBTN: {
     width: '100%',  
