@@ -73,33 +73,40 @@ export default function HomeScreen(){
 
     <ImageBackground source={bgimage} resizeMode="cover" style={home_styles.image}>
       
+      <View>
         <TextInput
           style={home_styles.input}
           onChangeText={onChangeitemPrice}
           keyboardType="numeric"
           maxLength={9}
           value={itemPrice} />
+      </View>
 
+      <View>
         <RadioGroup
           style={home_styles.radioInput}
           radioButtons={radioButtons}
           onPress={onPressRadioButton}
           layout="row" />
+      </View>
 
+      <View>
         <Pressable
           style={home_styles.calcuBTN}
           onPress={() => Alert.alert("The tip is: $" + format_money(caltip(selectedButton['value'], format_money(itemPrice))) + " For the amount off $" + format_money(itemPrice))}
         >
           <Text style={home_styles.text}> CALCULATE </Text>
         </Pressable>
+      </View>
 
-
+      <View>
         <Pressable
           style={home_styles.aboutBTN}
           onPress={() => Alert.alert("This app was develop by Robert Coleman", "As an exercise to learn the react native environment.")}
         >
           <Text style={home_styles.text}> ABOUT THIS APP! </Text>
         </Pressable>
+      </View>
 
         </ImageBackground>
       </View>
