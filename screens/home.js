@@ -142,7 +142,7 @@ const home_styles = StyleSheet.create({
     borderRadius: 4,
     elevation: 3,
     backgroundColor: 'gray',
-    top: 100,
+    top: 50,
   },
   aboutBTN: {
     width: '100%',  
@@ -152,7 +152,7 @@ const home_styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    position: 'absolute',
+    //position: 'absolute',
     bottom: 0,
   },
   text: {
