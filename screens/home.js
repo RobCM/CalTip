@@ -82,7 +82,7 @@ export default function HomeScreen(){
           value={itemPrice} />
       </View>
 
-      <View>
+      <View style={home_styles.radioBox}>
         <RadioGroup
           style={home_styles.radioInput}
           radioButtons={radioButtons}
@@ -131,6 +131,9 @@ const home_styles = StyleSheet.create({
     padding: 5,
     fontSize: 50,
     top: 50,
+  },
+  radioBox: {
+    alignItems: 'center',
   },
   radioInput: {
     top: 70,
