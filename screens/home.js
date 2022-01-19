@@ -133,12 +133,14 @@ const home_styles = StyleSheet.create({
     top: 50,
   },
   radioBox: {
+    backgroundColor: '#eb75e8',
     alignItems: 'center',
   },
   radioInput: {
     top: 70,
   }, 
   calcuBTN: {
+    width: 250,
     margin: 80,
     paddingVertical: 12,
     paddingHorizontal: 32,
@@ -146,6 +148,7 @@ const home_styles = StyleSheet.create({
     elevation: 3,
     backgroundColor: 'gray',
     top: 50,
+    textAlign: 'center',
   },
   aboutBTN: {
     width: '100%',  
@@ -159,7 +162,7 @@ const home_styles = StyleSheet.create({
     bottom: 0,
   },
   text: {
-    fontSize: 16,
+    fontSize: 18,
     lineHeight: 21,
     fontWeight: 'bold',
     letterSpacing: 0.25,
