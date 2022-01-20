@@ -74,6 +74,7 @@ export default function HomeScreen(){
     <ImageBackground source={bgimage} resizeMode="cover" style={home_styles.image}>
       
       <View>
+        
         <TextInput
           style={home_styles.input}
           onChangeText={onChangeitemPrice}
@@ -146,9 +147,8 @@ const home_styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: 'gray',
+    backgroundColor: '#eb75e8',
     top: 50,
-    textAlign: 'center',
   },
   aboutBTN: {
     width: '100%',  
@@ -167,6 +167,7 @@ const home_styles = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 0.25,
     color: 'white',
+    textAlign: 'center',
   },
   titleBox: {
     width: '100%', 
