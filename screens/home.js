@@ -74,7 +74,7 @@ export default function HomeScreen(){
     <ImageBackground source={bgimage} resizeMode="cover" style={home_styles.image}>
       
       <View>
-        
+        <Text style={home_styles.dollarSign}> $ </Text>
         <TextInput
           style={home_styles.input}
           onChangeText={onChangeitemPrice}
@@ -121,6 +121,9 @@ const home_styles = StyleSheet.create({
     flex: 1, 
     justifyContent: 'center',
   },
+  dollarSign: {
+
+  },
   input: {
     width: 250,
     height: 70,
@@ -134,7 +137,7 @@ const home_styles = StyleSheet.create({
     top: 50,
   },
   radioBox: {
-    backgroundColor: '#eb75e8',
+    backgroundColor: '#ff44cc',
     alignItems: 'center',
   },
   radioInput: {
@@ -147,7 +150,7 @@ const home_styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: '#eb75e8',
+    backgroundColor: '#ff44cc',
     top: 50,
   },
   aboutBTN: {
