@@ -73,7 +73,7 @@ export default function HomeScreen(){
 
     <ImageBackground source={bgimage} resizeMode="cover" style={home_styles.image}>
       
-      <View>
+      <View style={home_styles.viewBox}>
         <Text style={home_styles.dollarSign}> $ </Text>
         <TextInput
           style={home_styles.input}
@@ -122,7 +122,10 @@ const home_styles = StyleSheet.create({
     justifyContent: 'center',
   },
   dollarSign: {
-
+    color: '#ff44cc',
+    fontSize: 80,
+    fontWeight: 'bold',
+    top: 210,
   },
   input: {
     width: 250,
