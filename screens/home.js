@@ -17,7 +17,7 @@ const radioButtonsData = [
       <Text style={{color: '#FFFFFF'}}>{'5%'}</Text>
     ),
     value: '5',
-    color: 'gray',
+    color: 'white',
     selected: false,
   },
   {
@@ -26,7 +26,7 @@ const radioButtonsData = [
       <Text style={{color: '#FFFFFF'}}>{'10%'}</Text>
     ),
     value: '10',
-    color: 'gray',
+    color: 'white',
     selected: false,
   },
   {
@@ -35,7 +35,7 @@ const radioButtonsData = [
       <Text style={{color: '#FFFFFF'}}>{'15%'}</Text>
     ),
     value: '15',
-    color: 'gray',
+    color: 'white',
     selected: true,
   },
   {
@@ -44,7 +44,7 @@ const radioButtonsData = [
       <Text style={{color: '#FFFFFF'}}>{'20%'}</Text>
     ),
     value: '20',
-    color: 'gray',
+    color: 'white',
     selected: false,
   },
 ];
@@ -132,7 +132,7 @@ const home_styles = StyleSheet.create({
     height: 70,
     margin: 80,
     borderWidth: 1,
-    borderColor: 'gray',
+    borderColor: 'white',
     backgroundColor: 'black',
     color: 'white',
     padding: 5,
