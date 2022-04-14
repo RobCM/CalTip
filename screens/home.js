@@ -3,7 +3,7 @@
     @RobertC 9/7/2021
 
 */
-import {StyleSheet, Text, View, Button, Alert,  TextInput, Pressable,  ImageBackground} from 'react-native';
+import {StyleSheet, Text, View, Button, Alert,  TextInput, Pressable,  ImageBackground, Modal} from 'react-native';
 import React from 'react';
 import {useState} from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
@@ -57,6 +57,11 @@ export default function HomeScreen(){
     setRadioButtons(radioButtonsArray);
   };
 
+  // For modal
+  const [visible, setVisible] = React.useState(false);
+  const showModal = () => setVisible(true);
+  const hideModal = () => setVisible(false);
+
   // To get radio button value!
   let selectedButton = radioButtonsData.find(e => e.selected == true);
 
@@ -67,6 +72,10 @@ export default function HomeScreen(){
     
     <View style={home_styles.titleBox}>
         <Text style={home_styles.title_text}>Tip Calculater</Text>
+
+        <Modal visible={visible} onDismiss={hideModal} style={home_styles.popup}>
+            <Text>Example Modal.  Click outside this area to dismiss.</Text>
+        </Modal>
     </View>
     
     <View style={home_styles.viewBox}>
@@ -103,7 +112,8 @@ export default function HomeScreen(){
       <View>
         <Pressable
           style={home_styles.aboutBTN}
-          onPress={() => Alert.alert("This app was develop by Robert Coleman", "As an exercise to learn the react native environment.")}
+          //onPress={() => Alert.alert("This app was develop by Robert Coleman", "As an exercise to learn the react native environment.")}
+          onPress={() => showModal()}
         >
           <Text style={home_styles.text}> ABOUT THIS APP! </Text>
         </Pressable>
@@ -193,6 +203,14 @@ const home_styles = StyleSheet.create({
   image: {
     flex: 1,
     justifyContent: "center"
+  },
+  popup: {
+    flex: 1,
+    width: '100%',
+    justifyContent: "center",
+    position: 'absolute',
+    top: 150,
+    fontSize: 36,
   },
 });
 
