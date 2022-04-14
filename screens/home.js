@@ -14,7 +14,7 @@ const radioButtonsData = [
   {
     id: '1',
     label: (
-      <Text style={{color: '#FFFFFF'}}>{'5%'}</Text>
+      <Text style={{color: '#FFFFFF', fontSize: 30}}>{'5%'}</Text>
     ),
     value: '5',
     color: 'white',
@@ -23,7 +23,7 @@ const radioButtonsData = [
   {
     id: '2',
     label: (
-      <Text style={{color: '#FFFFFF'}}>{'10%'}</Text>
+      <Text style={{color: '#FFFFFF', fontSize: 30}}>{'10%'}</Text>
     ),
     value: '10',
     color: 'white',
@@ -32,7 +32,7 @@ const radioButtonsData = [
   {
     id: '3',
     label: (
-      <Text style={{color: '#FFFFFF'}}>{'15%'}</Text>
+      <Text style={{color: '#FFFFFF', fontSize: 30}}>{'15%'}</Text>
     ),
     value: '15',
     color: 'white',
@@ -41,7 +41,7 @@ const radioButtonsData = [
   {
     id: '4',
     label: (
-      <Text style={{color: '#FFFFFF'}}>{'20%'}</Text>
+      <Text style={{color: '#FFFFFF', fontSize: 30}}>{'20%'}</Text>
     ),
     value: '20',
     color: 'white',
