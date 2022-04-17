@@ -73,8 +73,14 @@ export default function HomeScreen(){
     <View style={home_styles.titleBox}>
         <Text style={home_styles.title_text}>Tip Calculater</Text>
 
-        <Modal visible={visible} onDismiss={hideModal} style={home_styles.popup}>
-            <Text>Example Modal.  Click outside this area to dismiss.</Text>
+        <Modal visible={visible} style={home_styles.popup}>
+            <Text>This app was develop by Robert Coleman As an exercise to learn the react native environment.</Text>
+            <Pressable
+              style={home_styles.calcuBTN}
+               onPress={() => hideModal()}
+            >
+            <Text style={home_styles.text}>Back to app</Text>
+        </Pressable>
         </Modal>
     </View>
     
@@ -207,6 +213,7 @@ const home_styles = StyleSheet.create({
   popup: {
     flex: 1,
     width: '100%',
+    height: 100,
     justifyContent: "center",
     position: 'absolute',
     top: 150,
