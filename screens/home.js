@@ -73,14 +73,15 @@ export default function HomeScreen(){
     <View style={home_styles.titleBox}>
         <Text style={home_styles.title_text}>Tip Calculater</Text>
 
-        <Modal visible={visible} style={home_styles.popup}>
+        <Modal visible={visible} transparent={true} style={home_styles.popup}>
+          <View style={home_styles.popup_box}>
             <Text>This app was develop by Robert Coleman As an exercise to learn the react native environment.</Text>
-            <Pressable
-              style={home_styles.calcuBTN}
-               onPress={() => hideModal()}
-            >
-            <Text style={home_styles.text}>Back to app</Text>
-        </Pressable>
+          </View>
+          <Pressable style={home_styles.calcuBbacktoappBTN}
+                 onPress={() => hideModal()}
+          >
+               <Text style={home_styles.text}>Back to app</Text>
+          </Pressable>
         </Modal>
     </View>
     
@@ -180,7 +181,6 @@ const home_styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    //position: 'absolute',
     bottom: 0,
   },
   text: {
@@ -210,14 +210,28 @@ const home_styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center"
   },
-  popup: {
-    flex: 1,
-    width: '100%',
-    height: 100,
-    justifyContent: "center",
-    position: 'absolute',
+  popup_box:{
     top: 150,
+    width: '100%',
+    height: 230,
+    backgroundColor: 'white',
+    paddingVertical: 10,
+    paddingHorizontal: 10
+  },
+  popup: {
     fontSize: 36,
+    fontWeight: 'bold',
+    letterSpacing: 0.35,
+    color: '#ff44cc'
+  },
+  calcuBbacktoappBTN: {
+    width: 250,
+    margin: 80,
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: '#ff44cc'
   },
 });
 
