@@ -213,7 +213,7 @@ const home_styles = StyleSheet.create({
   popup_box:{
     top: 150,
     width: '100%',
-    height: 230,
+    height: 400,
     backgroundColor: 'white',
     paddingVertical: 10,
     paddingHorizontal: 10
