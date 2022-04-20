@@ -211,9 +211,9 @@ const home_styles = StyleSheet.create({
     justifyContent: "center"
   },
   popup_box:{
-    top: 150,
+    top: 0,
     width: '100%',
-    height: 400,
+    height: '100%',
     backgroundColor: 'white',
     paddingVertical: 10,
     paddingHorizontal: 10
