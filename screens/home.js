@@ -77,7 +77,7 @@ export default function HomeScreen(){
           <View style={home_styles.popup_box}>
             <Text>This app was develop by Robert Coleman As an exercise to learn the react native environment.</Text>
           </View>
-          <Pressable style={home_styles.calcuBbacktoappBTN}
+          <Pressable style={home_styles.backtoappBTN}
                  onPress={() => hideModal()}
           >
                <Text style={home_styles.text}>Back to app</Text>
@@ -224,7 +224,7 @@ const home_styles = StyleSheet.create({
     letterSpacing: 0.35,
     color: '#ff44cc'
   },
-  calcuBbacktoappBTN: {
+  backtoappBTN: {
     width: 250,
     margin: 80,
     paddingVertical: 12,
