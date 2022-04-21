@@ -90,7 +90,7 @@ export default function HomeScreen(){
     <ImageBackground source={bgimage} resizeMode="cover" style={home_styles.image}>
       
       <View style={home_styles.viewBox}>
-        <Text style={home_styles.dollarSign}> $ </Text>
+        <Text style={home_styles.dollarSign}>$</Text>
         <TextInput
           style={home_styles.input}
           onChangeText={onChangeitemPrice}
@@ -112,7 +112,7 @@ export default function HomeScreen(){
           style={home_styles.calcuBTN}
           onPress={() => Alert.alert("The tip is: $" + format_money(caltip(selectedButton['value'], format_money(itemPrice))) + " For the amount off $" + format_money(itemPrice))}
         >
-          <Text style={home_styles.text}> CALCULATE </Text>
+          <Text style={home_styles.text}>CALCULATE</Text>
         </Pressable>
       </View>
 
@@ -122,7 +122,7 @@ export default function HomeScreen(){
           //onPress={() => Alert.alert("This app was develop by Robert Coleman", "As an exercise to learn the react native environment.")}
           onPress={() => showModal()}
         >
-          <Text style={home_styles.text}> ABOUT THIS APP! </Text>
+          <Text style={home_styles.text}>ABOUT THIS APP!</Text>
         </Pressable>
       </View>
 
