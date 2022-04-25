@@ -58,7 +58,7 @@ export default function HomeScreen(){
   };
 
   // For modal
-  const [visible, setVisible] = React.useState(false);
+  const [aboutApp, setVisible] = React.useState(false);
   const showModal = () => setVisible(true);
   const hideModal = () => setVisible(false);
 
@@ -73,7 +73,7 @@ export default function HomeScreen(){
     <View style={home_styles.titleBox}>
         <Text style={home_styles.title_text}>Tip Calculater</Text>
 
-        <Modal visible={visible} transparent={true} style={home_styles.popup}>
+        <Modal visible={aboutApp} transparent={true} style={home_styles.popup}>
           <View style={home_styles.popup_box}>
             <Text style={home_styles.modal_1_text}>This app was develop by Robert Coleman as an exercise to learn the react native environment.</Text>
           </View>
