@@ -58,9 +58,9 @@ export default function HomeScreen(){
   };
 
   // For modal
-  const [aboutApp, setVisible] = React.useState(false);
-  const showModal = () => setVisible(true);
-  const hideModal = () => setVisible(false);
+  const [aboutApp, setaboutApp] = React.useState(false);
+  const showModal = () => setaboutApp(true);
+  const hideModal = () => setaboutApp(false);
 
   // To get radio button value!
   let selectedButton = radioButtonsData.find(e => e.selected == true);
