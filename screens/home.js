@@ -57,10 +57,14 @@ export default function HomeScreen(){
     setRadioButtons(radioButtonsArray);
   };
 
-  // For modal
+  // For about app modal
   const [aboutApp, setaboutApp] = React.useState(false);
   const showModal = () => setaboutApp(true);
   const hideModal = () => setaboutApp(false);
+  // For calculation momal
+  const [calcu, setcalcu] = React.useState(false);
+  const showModal_calcu = () => setcalcu(true);
+  const hideModal_calcu = () => setcalcu(false);
 
   // To get radio button value!
   let selectedButton = radioButtonsData.find(e => e.selected == true);
@@ -79,6 +83,17 @@ export default function HomeScreen(){
           </View>
           <Pressable style={home_styles.backtoappBTN}
                  onPress={() => hideModal()}
+          >
+               <Text style={home_styles.text}>Back to app</Text>
+          </Pressable>
+        </Modal>
+
+        <Modal visible={calcu} transparent={true} style={home_styles.popup}>
+          <View style={home_styles.popup_box}>
+            <Text style={home_styles.modal_1_text}>TESTING.....</Text>
+          </View>
+          <Pressable style={home_styles.backtoappBTN}
+                 onPress={() => hideModal_calcu()}
           >
                <Text style={home_styles.text}>Back to app</Text>
           </Pressable>
@@ -110,7 +125,8 @@ export default function HomeScreen(){
       <View>
         <Pressable
           style={home_styles.calcuBTN}
-          onPress={() => Alert.alert("The tip is: $" + format_money(caltip(selectedButton['value'], format_money(itemPrice))) + " For the amount off $" + format_money(itemPrice))}
+          //onPress={() => Alert.alert("The tip is: $" + format_money(caltip(selectedButton['value'], format_money(itemPrice))) + " For the amount off $" + format_money(itemPrice))}
+          onPress={() => showModal_calcu()}
         >
           <Text style={home_styles.text}>CALCULATE</Text>
         </Pressable>
