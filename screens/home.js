@@ -90,7 +90,7 @@ export default function HomeScreen(){
 
         <Modal visible={calcu} transparent={true} style={home_styles.popup}>
           <View style={home_styles.popup_box}>
-            <Text style={home_styles.modal_1_text}>TESTING.....</Text>
+            <Text style={home_styles.modal_1_text}>"The tip is: $"{format_money(caltip(selectedButton['value'], format_money(itemPrice)))} " For the amount off $"{format_money(itemPrice)}</Text>
           </View>
           <Pressable style={home_styles.backtoappBTN}
                  onPress={() => hideModal_calcu()}
